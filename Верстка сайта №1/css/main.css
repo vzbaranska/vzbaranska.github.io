@@ -1,0 +1,329 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+li {
+    list-style: none;
+}
+header {
+    width: 100%;
+    height: 120px;
+    background-color: #02023F;
+    display: flex;
+
+}
+.wrapper {
+     width: 1170px;
+     margin: 0 auto;
+ }
+.header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+.header__logo {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 800;
+    font-size: 24px;
+    cursor: pointer;
+}
+.top-nav a {
+    color: #fff;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.top-nav a:hover {
+    border-bottom: 2px solid #fcac45;
+}
+.top-nav .icon {
+    display: none;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.main-welcome {
+    background-color: #2A7CCF;
+    text-align: center;
+    padding: 150px 0;
+}
+.main-welcome p {
+    color: #fff;
+    font-size: 22px;
+}
+.main-welcome h1 {
+    text-transform: uppercase;
+    font-size: 44px;
+    color: #fff;
+}
+.my-company {
+    color: #fcac45;
+}
+
+.main-about {
+    display: flex;
+    padding: 100px 0;
+    justify-content: space-between;
+}
+.about-right {
+    text-align: center;
+    width: 45%;
+}
+.about-right h2, .main-team h2, .advantages h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #fcac45;
+    padding-bottom: 20px;
+    font-weight: 900;
+    display: inline-block;
+}
+
+.about-right p {
+    font-size: 28px;
+    margin-top: 50px;
+    line-height: 42px;
+}
+.mw-100 {
+    min-width: 100%;
+}
+.main-team {
+    background: #2A7CCF;
+    text-align: center;
+    padding: 150px 0;
+    color: #fff;
+}
+.photo {
+    background-color: azure;
+    width: 125px;
+    height: 125px;
+    border-radius: 125px;
+    margin: 20px auto;
+}
+.team-cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.card {
+    margin: 0 20px;
+}
+.position {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.advantages {
+    margin: 150px 0;
+}
+.advantages li {
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 600;
+    list-style-type: disc;
+}
+.advantages h2 {
+    margin-bottom: 20px;
+    margin-left: 30%;
+
+}
+.advantages-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 30%;
+}
+.advantages i {
+    padding-right: 10px;
+}
+.place-images {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    width: 100%;
+    text-align: center;
+}
+.place-images p {
+    font-size:34px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.footer {
+    background-color: #02023F;
+    width: 100%;
+}
+.footer p {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0 25px;
+}
+.footer a {
+    color: #fff;
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.icons a {
+    font-size: 28px;
+    padding-left: 25px;
+}
+.icons a:first-child {
+    padding-left: 0;
+}
+.contact-form {
+    margin-top: 80px;
+    background-color:#2A7CCF ;
+    padding-top: 40px;
+    color: #fff;
+    padding-bottom: 20px;
+    width: 100%;
+    display: flex;
+    font-size: 28px;
+}
+.wrapper-form {
+    width: 700px;
+    margin: 0 auto;
+}
+input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+input:first-of-type {
+    margin-right: 25px;
+}
+.red {
+    color: red;
+}
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+textarea {
+    width: 100%;
+    height: 165px;
+    margin-top: 20px;
+}
+input, textarea {
+    border: 1px solid #999;
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    background-color: #fcac45 ;
+}
+
+
+@media screen and (max-width: 1500px){
+    .place-images {
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        width: 960px;
+    }
+    .header__logo {
+        font-size: 22px;
+        width: 150px;
+    }
+    .top-nav a{
+        display: none;
+    }
+    .top-nav a.icon {
+        float:right;
+        margin-top: -7px;
+        display: block;
+        color:#fff;
+        font-size: 25px;
+    }
+    nav {
+        width: 100%;
+    }
+    .top-nav.responsive {
+        position: relative;
+        top: 270px;
+        left: -160px;
+    }
+    header .top-nav.responsive {
+        height: 400px;
+    }
+    .top-nav.responsive a.icon {
+        position: absolute;
+        top: -270px;
+        right: -160px;
+    }
+    .top-nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        margin-left: 25px;
+    }
+    .main-about {
+        flex-direction: column;
+    }
+    .about-right, .about-left {
+        width: 100%;
+    }
+    .about-right h2 {
+        margin-top: 40px;
+    }
+    .place-images {
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .wrapper {
+        width: 720px;
+    }
+    .advantages-items {
+        margin-left: 5%;
+    }
+    .advantages-items li {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 540px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper {
+        width: 90%;
+    }
+ .place-img p {
+     font-size: 28px;
+ }
+    .team-cards {
+      flex-direction: column;
+  }
+}
