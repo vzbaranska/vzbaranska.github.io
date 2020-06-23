@@ -1,0 +1,342 @@
+@import "variables";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Montserrat, sans-serif;
+}
+.wrapper {
+  min-width: 320px;
+  margin: $contentPosition;
+}
+.wrap {
+  padding: 0 10px;
+  margin: $contentPosition;
+  background-color: $backgroundColor;
+}
+.header {
+  background-color: $backgroundColor;
+  margin-left: 0;
+  padding: 30px 0;
+  display: flex;
+  width: 86%;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-img {
+  background-image: url("../img/Logo.png");
+  width: 43px;
+  height: 41px;
+}
+.logo-img:hover {
+  background-image: url("../img/logo-hover.png");
+  width: 43px;
+  height: 41px;
+}
+.brand-name {
+  display: none;
+}
+.btn {
+  outline: none;
+  background-color: #8d81ac;
+  color: #fff;
+  font-weight: bold;
+  list-style: none;
+}
+.btn-header {
+  padding: 10px 36px;
+  margin: $contentPosition;
+  font-size: 16px;
+  border-radius: 20px;
+}
+.btn-header:hover {
+  color: #8d81ac;
+  background-color: #fff;
+}
+.btn-large:hover {
+  color: #8d81ac;
+  background-color: #fff;
+  border: 1px solid #8d81ac;
+}
+.main {
+  background-image: url("../img/header.png");
+  padding-top: 43px;
+  @include backgroundStyle;
+  text-align: center;
+  padding-bottom: 485px;
+  margin-bottom: 40px;
+}
+.main-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 0 32px;
+  text-transform: capitalize;
+}
+.main-desc {
+  color: #8d81ac;
+  font-size: 18px;
+  margin: 0 31px 20px;
+  line-height: 44px;
+  text-transform: capitalize;
+}
+.main-text {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #78818a;
+}
+.download-text {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #848e97;
+  text-align: center;
+  margin-bottom: 110px;
+}
+.btn-large {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 16px 33px;
+  text-transform: capitalize;
+  position: relative;
+  border-radius: 190px;
+  font-weight: bold;
+  top: 500px;
+  left: 1%;
+}
+#menu-toggle {
+  opacity: 0;
+}
+.menu-btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #e5e3e3;
+}
+.menu-btn > span::before {
+  content: '';
+  top: -12px;
+  width: 21px;
+  margin-left: 5px;
+}
+.menu-btn > span::after {
+  content: '';
+  top: 12px;
+}
+.menu-list {
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  right: 0;
+  width: 90%;
+  height: 400px;
+  list-style: none;
+  background-color: #333;
+  box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
+}
+.menu-item {
+  display: block;
+  padding: 32px 34px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  list-style: none;
+  border-bottom: 2px solid #3b3b3b;
+}
+.menu-link {
+  color: #8d81ac;
+  font-size: 26px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.menu-link:hover {
+  color: #fff;
+}
+#menu-toggle:checked ~ .menu-btn {
+  top: 40px;
+}
+#menu-toggle:checked ~ .menu-list {
+  visibility: visible;
+  left: 5%;
+  top: 101px;
+}
+.cards-container {
+  margin: $contentPosition;
+  padding: 0 10px;
+}
+.talking-about {
+  margin: $contentPosition;
+  padding: 65px 0 45px;
+  background-image: url("../img/testmonials-bg-1.png");
+  @include backgroundStyle;
+}
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.card-text {
+  font-size: 16px;
+  color: #fff3cd;
+  line-height: 26px;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 40px;
+}
+.card-logo {
+  margin-bottom: 40px;
+  align-self: center;
+}
+
+@media screen and (min-width: 481px) {
+  .header {
+    width: 100%;
+    padding-bottom: 53px;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .menu-list {
+    visibility: visible;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: unset;
+    height: unset;
+    top: 95px;
+    width: 80%;
+    left: 11%;
+  }
+  .brand-name {
+    text-transform: uppercase;
+    color: #8d81ac;
+    font-size: 24px;
+    display: block;
+    font-weight: 400;
+    margin-left: 20px;
+  }
+  .brand-name:hover {
+    color: #fff;
+  }
+  .menu-item {
+    list-style: none;
+    border-bottom: unset;
+    padding: 0;
+  }
+  .menu-link {
+    font-size: 16px;
+    padding: 0;
+  }
+  .menu-item:first-child {
+    margin-left: 0;
+  }
+  .btn-header {
+    padding: 10px 36px;
+    margin-right: 0;
+    font-size: 16px;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+  .main-title {
+    font-size: 72px;
+    margin-top: 20px;
+  }
+  .main-desc {
+    font-size: 24px;
+  }
+  .btn-large {
+    font-size: 21px;
+  }
+  .section-title {
+    font-size: 42px;
+  }
+  .cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 47%;
+    align-items: start;
+  }
+  .card-logo {
+    margin-bottom: 53px;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .header {
+    width: 100%;
+    padding: 36px 0;
+  }
+  .menu-list {
+    position: unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 525px;
+  }
+  .main-title {
+    font-size: 82px;
+  }
+  .main-desc {
+    font-size: 30px;
+  }
+  .main-text {
+    font-size: 16px;
+  }
+  .btn-header {
+    margin-left: 20px;
+  }
+  .card {
+    width: 30%;
+    align-items: start;
+  }
+  .talking-about {
+    background-image: url("../img/testmonials-bg-3.png");
+    @include  backgroundStyle;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .header {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
